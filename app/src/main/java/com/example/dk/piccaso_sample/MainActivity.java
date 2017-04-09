@@ -14,8 +14,9 @@ import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity {
 
-    //    @BindView(R.id.imageView)
+//    @BindView(R.id.imageView)
 //    ImageView imageview1;
+
     private Toolbar toolbar;
     private FloatingActionButton fab;
 
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 //        ButterKnife.bind(this);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
