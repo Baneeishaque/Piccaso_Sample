@@ -12,21 +12,23 @@ import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.imageView)
-    ImageView imageview1;
+    //    @BindView(R.id.imageView)
+//    ImageView imageview1;
+    private Toolbar toolbar;
+    private FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ImageView imageView = (ImageView) findViewById(R.id.imageView);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        ButterKnife.bind(this);
+//        ButterKnife.bind(this);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -42,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         Picasso
                 .with(getApplicationContext())
                 .load(internetUrl)
-                .into(imageview1);
+                .into(imageView);
     }
 
     @Override
